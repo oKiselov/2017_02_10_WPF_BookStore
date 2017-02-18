@@ -1,0 +1,137 @@
+﻿<Window x:Class="WpfBookStore.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBookStore"
+        mc:Ignorable="d"
+        Title="BookStore" Height="700" Width="1100" FontSize="18">
+    <Grid Background="DarkCyan">
+        <TabControl x:Name="myTabSystem" HorizontalAlignment="Stretch" Margin="20,30,20,20" VerticalAlignment="Stretch">
+            <TabItem Header="Printed products" HorizontalAlignment="Stretch">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="9*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Background="#FFE5E5E5" Orientation="Vertical"  Grid.Row="0" VerticalAlignment="Top">
+                        <ToolBar x:Name="PrintedToolBar">
+                            <Border>
+                                <RadioButton Name="PrintedProductsRadioButtonAuthorsName" GroupName="One" IsChecked="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" VerticalContentAlignment="Center">Author's Name</RadioButton>
+                            </Border>
+                            <Border>
+                                <RadioButton Name="PrintedProductsRadioButtonBookTitle" GroupName="One" IsChecked="False" HorizontalAlignment="Stretch" VerticalAlignment="Center" VerticalContentAlignment="Center">Book Title</RadioButton>
+                            </Border>
+                            <Border >
+                                <RadioButton Name="PrintedProductsRadioButtonBookId" GroupName="One" IsChecked="False" HorizontalAlignment="Stretch" VerticalAlignment="Center" VerticalContentAlignment="Center">Book Id</RadioButton>
+                            </Border>
+                            <Border >
+                                <RadioButton Name="PrintedProductsRadioButtonShowAll" GroupName="One" IsChecked="False" HorizontalAlignment="Stretch" VerticalAlignment="Center" VerticalContentAlignment="Center">Show All</RadioButton>
+                            </Border>
+                            <Border/>
+                            <Label Content=" Enter your option:"/>
+                            <TextBox Name="BooksTextBox" HorizontalAlignment="Right" Width="250"/>
+                            <Button Content="Search" Background="#FF7EE3ED" HorizontalAlignment="Right" Width="100" Click="ButtonBasePrintedProducts_OnClick"/>
+                        </ToolBar>
+                    </StackPanel>
+                    <DataGrid x:Name="PrintedDataGridView" ItemsSource="{Binding}" Grid.Row="1" HorizontalContentAlignment="Center"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Authors" HorizontalAlignment="Stretch">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="9*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Background="#FFE5E5E5" Orientation="Vertical"  Grid.Row="0" VerticalAlignment="Top">
+                        <ToolBar x:Name="AuthorsToolBar">
+                            <Border>
+                                <RadioButton Name="AuthorsRadioButtonAuthorsName" GroupName="One" IsChecked="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" VerticalContentAlignment="Center">Author's Last Name</RadioButton>
+                            </Border>
+                            <Border >
+                                <RadioButton Name="AuthorsRadioButtonAuthorsId" GroupName="One" IsChecked="False" HorizontalAlignment="Stretch" VerticalAlignment="Center" VerticalContentAlignment="Center">Author's Id</RadioButton>
+                            </Border>
+                            <Border >
+                                <RadioButton Name="AuthorsRadioButtonShowAll" GroupName="One" IsChecked="False" HorizontalAlignment="Stretch" VerticalAlignment="Center" VerticalContentAlignment="Center">Show All</RadioButton>
+                            </Border>
+                            <Border/>
+                            <Label Content="    Enter your option:"/>
+                            <TextBox Name="AuthorsTextBox" HorizontalAlignment="Right" Width="250"/>
+                            <Button Content="Search" Background="#FF7EE3ED" HorizontalAlignment="Right" Width="100" Click="ButtonBaseAuthors_OnClick"/>
+                        </ToolBar>
+                    </StackPanel>
+                    <DataGrid x:Name="AuthorsDataGridView" ItemsSource="{Binding}" Grid.Row="1" HorizontalContentAlignment="Center"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Book shops" HorizontalAlignment="Stretch">
+                <Grid Background="#FFE5E5E5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="9*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Background="#FFE5E5E5" Orientation="Vertical"  Grid.Row="0" VerticalAlignment="Top">
+                    <ToolBar x:Name="BookShopsToolBar">
+                        <Border>
+                                <RadioButton Name="ShopRadioButtonTitle" GroupName="One" IsChecked="True" HorizontalAlignment="Stretch" VerticalAlignment="Center" VerticalContentAlignment="Center">Shop Title</RadioButton>
+                        </Border>
+                        <Border >
+                                <RadioButton Name="ShopRadioButtonCustomersLastName" GroupName="One" IsChecked="False" HorizontalAlignment="Stretch" VerticalAlignment="Center" VerticalContentAlignment="Center">Customers Last Name</RadioButton>
+                        </Border>
+                        <Border >
+                            <RadioButton Name="ShopRadioButtonShowAll" GroupName="One" IsChecked="False" HorizontalAlignment="Stretch" VerticalAlignment="Center" VerticalContentAlignment="Center">Show All</RadioButton>
+                        </Border>
+                        <Border/>
+                        <Label Content="    Enter your option:"/>
+                        <TextBox Name="ShopTextBox" HorizontalAlignment="Right" Width="250"/>
+                            <Button Content="Search" Background="#FF7EE3ED" HorizontalAlignment="Right" Width="100" Click="ButtonBaseBookShops_OnClick"/>
+                    </ToolBar>
+                </StackPanel>
+                <DataGrid x:Name="BookShopsDataGridView" ItemsSource="{Binding}" Grid.Row="1" HorizontalContentAlignment="Center"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Sales" HorizontalAlignment="Stretch">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="9*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Background="#FFE5E5E5" Orientation="Vertical"  Grid.Row="0" VerticalAlignment="Top">
+                        <ToolBar x:Name="SalesToolBar">
+                            <Border >
+                                <RadioButton Name="SaleRadioButtonShop" GroupName="One" IsChecked="False" HorizontalAlignment="Stretch" VerticalAlignment="Center" VerticalContentAlignment="Center">Shops Title</RadioButton>
+                            </Border>
+                            <Border >
+                                <RadioButton Name="SaleRadioButtonShowAll" GroupName="One" IsChecked="False" HorizontalAlignment="Stretch" VerticalAlignment="Center" VerticalContentAlignment="Center">Show All</RadioButton>
+                            </Border>
+                            <Border/>
+                            <Label Content="    Enter your option:"/>
+                            <TextBox Name="SalesTextBox" HorizontalAlignment="Right" Width="250"/>
+                            <Button Content="Search" Background="#FF7EE3ED" HorizontalAlignment="Right" Width="100" Click="ButtonBaseSales_OnClick"/>
+                        </ToolBar>
+                    </StackPanel>
+                    <DataGrid x:Name="SalesDataGridView" ItemsSource="{Binding}" Grid.Row="1" HorizontalContentAlignment="Center"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Customers" HorizontalAlignment="Stretch">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="9*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Background="#FFE5E5E5" Orientation="Vertical"  Grid.Row="0" VerticalAlignment="Top">
+                        <ToolBar x:Name="CustomersToolBar">
+                           <Border>
+                                <RadioButton Name="CustomersRadioButtonShowAll" GroupName="One" IsChecked="False" HorizontalAlignment="Stretch" VerticalAlignment="Center" VerticalContentAlignment="Center">Show All</RadioButton>
+                            </Border>
+                            <Border/>
+                            <Label  Content="    Enter your option:"/>
+                            <TextBox Name="CustomersTextBox" HorizontalAlignment="Right" Width="250"/>
+                            <Button Content="Search" Background="#FF7EE3ED" HorizontalAlignment="Right" Width="100" Click="ButtonBaseCustomers_OnClick"/>
+                        </ToolBar>
+                    </StackPanel>
+                    <DataGrid x:Name="CustomersDataGridView" ItemsSource="{Binding}" Grid.Row="1" HorizontalContentAlignment="Center"/>
+                </Grid>
+                </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

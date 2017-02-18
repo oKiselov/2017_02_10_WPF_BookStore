@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WpfBookStore</name>
+    </assembly>
+    <members>
+        <member name="T:WpfBookStore.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:WpfBookStore.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:WpfBookStore.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:WpfBookStore.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:WpfBookStore.MainWindow.ButtonBasePrintedProducts_OnClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Mtehod describes application's behavior when button "Search" in TableItem Printed Products is pushed 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WpfBookStore.MainWindow.ButtonBaseAuthors_OnClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Mtehod describes application's behavior when button "Search" in TableItem Authors is pushed 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WpfBookStore.MainWindow.ButtonBaseBookShops_OnClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Mtehod describes application's behavior when button "Search" in TableItem Shops is pushed 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WpfBookStore.MainWindow.ButtonBaseSales_OnClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Mtehod describes application's behavior when button "Search" in TableItem Sales is pushed 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WpfBookStore.MainWindow.ButtonBaseCustomers_OnClick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Mtehod describes application's behavior when button "Search" in TableItem Customers is pushed 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WpfBookStore.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WpfBookStore.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:WpfBookStore.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:WpfBookStore.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
